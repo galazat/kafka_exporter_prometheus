@@ -11,6 +11,10 @@ const (
 )
 
 func main() {
+	setup(listenAddr, metricsPath)
+}
+
+func setup(listenAddr, metricsPath string) {
 	// Создаем свой ServeMux - явный и изолированный, а не используем глобальный. Пустой маршрутизатор
 	mux := http.NewServeMux()
 
